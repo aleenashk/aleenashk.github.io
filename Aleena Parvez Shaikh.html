@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Aleena Parvez Shaikh</title>
+
+<!-- 🔍 SEO & Social Meta Tags for GitHub Pages -->
+<meta name="description" content="Aleena Parvez Shaikh - Computer Engineering Student | Java & Python Developer | UI/UX Designer | Mumbai">
+<meta name="keywords" content="Aleena Shaikh, Java Developer, Python, Portfolio, Mumbai, Computer Engineering, UI/UX, Figma, SQL">
+<meta name="author" content="Aleena Parvez Shaikh">
+<meta name="robots" content="index, follow">
+
+<!-- 📱 Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aleena Parvez Shaikh | Portfolio">
+<meta property="og:description" content="Java & Python Developer | UI/UX Designer | Building efficient, user-centric technology">
+<meta property="og:image" content="https://opengraph.githubassets.com/1/aleenaparvezshaikh-codes/aleenaparvezshaikh-codes.github.io">
+
+<!-- 🐦 Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Aleena Parvez Shaikh | Portfolio">
+<meta name="twitter:description" content="Computer Engineering Student | Java • Python • SQL • UI/UX">
+
+<!-- 🔖 Favicon (optional - add favicon.ico to your repo) -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}
+body{background:linear-gradient(135deg,#f5f7fa 0%,#c3cfe2 100%);color:#333;line-height:1.7}
+marquee{background:linear-gradient(90deg,#1a1a2e,#16213e,#0f3460);color:#00ff88;padding:12px;font-weight:600;font-size:1.1rem}
+header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;text-align:center;padding:60px 20px;position:relative;overflow:hidden}
+header::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(255,255,255,0.1) 0%,transparent 70%);animation:pulse 4s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+header h1{font-size:3.2rem;margin-bottom:10px;text-shadow:2px 2px 4px rgba(0,0,0,0.2)}
+header .subtitle{font-size:1.3rem;opacity:0.95;margin-bottom:20px}
+header .contact-bar{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;margin-top:25px}
+header .contact-item{background:rgba(255,255,255,0.15);padding:10px 20px;border-radius:30px;display:flex;align-items:center;gap:8px;transition:transform 0.3s}
+header .contact-item:hover{transform:translateY(-3px);background:rgba(255,255,255,0.25)}
+header a{color:#ffd700;text-decoration:none;font-weight:500}
+header a:hover{text-decoration:underline}
+nav{background:#fff;position:sticky;top:0;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,0.15);padding:8px 0}
+nav ul{display:flex;justify-content:center;flex-wrap:wrap;list-style:none;gap:5px}
+nav li{margin:5px}
+nav a{text-decoration:none;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:12px 22px;border-radius:30px;display:inline-block;transition:all 0.3s;font-weight:500}
+nav a:hover{transform:translateY(-2px);box-shadow:0 5px 15px rgba(102,126,234,0.4)}
+.hero{text-align:center;padding:60px 20px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;position:relative}
+.hero::after{content:'✨';position:absolute;font-size:8rem;opacity:0.1;top:20px;right:20px;animation:float 3s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.hero h2{font-size:2.5rem;margin-bottom:15px}
+.hero p{font-size:1.3rem;opacity:0.95}
+.hero .badges{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:20px}
+.hero .badge{background:rgba(255,255,255,0.25);padding:8px 16px;border-radius:20px;font-size:0.95rem;color:#fff}
+section{background:#fff;width:90%;max-width:1100px;margin:30px auto;padding:30px;border-radius:20px;box-shadow:0 10px 40px rgba(0,0,0,0.12);transition:transform 0.3s}
+section:hover{transform:translateY(-5px)}
+section h2{color:#667eea;margin-bottom:20px;border-left:5px solid #667eea;padding-left:15px;font-size:1.8rem}
+.about-box{background:linear-gradient(135deg,#f8f9ff,#e8ecff);padding:20px;border-radius:15px;border-left:4px solid #667eea}
+.skill-grid{display:flex;flex-wrap:wrap;gap:10px;margin:15px 0}
+.skill{display:inline-block;background:linear-gradient(135deg,#667eea,#764ba2);color:white;padding:10px 20px;border-radius:25px;font-size:0.95rem;transition:transform 0.2s}
+.skill:hover{transform:scale(1.05);cursor:default}
+details{margin:15px 0;background:linear-gradient(135deg,#fafafa,#f0f4ff);padding:18px;border-left:4px solid #667eea;border-radius:12px;transition:all 0.3s}
+details[open]{background:linear-gradient(135deg,#e8ecff,#f8f9ff);box-shadow:0 5px 20px rgba(102,126,234,0.15)}
+summary{font-weight:600;color:#667eea;cursor:pointer;font-size:1.1rem;padding:5px 0;display:flex;align-items:center;gap:10px}
+summary::marker{color:#667eea;font-size:1.2rem}
+.project-meta{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.project-tag{background:#667eea;color:white;padding:4px 12px;border-radius:15px;font-size:0.85rem}
+.project-list{margin:12px 0;padding-left:20px}
+.project-list li{margin:8px 0}
+.achievements-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px;margin-top:15px}
+.achievement-card{background:#f8f9ff;padding:15px;border-radius:12px;border-left:4px solid #38ef7d}
+.achievement-card h4{color:#11998e;margin-bottom:5px}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px}
+.contact-info{background:linear-gradient(135deg,#667eea,#764ba2);color:white;padding:25px;border-radius:15px}
+.contact-info h3{margin-bottom:15px}
+.contact-info p{margin:12px 0;display:flex;align-items:center;gap:10px}
+.contact-info a{color:#ffd700}
+.contact-form{background:#f8f9ff;padding:25px;border-radius:15px}
+.contact-form input,.contact-form textarea,.contact-form select{width:100%;padding:12px;margin:8px 0 15px;border:2px solid #ddd;border-radius:10px;font-size:1rem;transition:border-color 0.3s}
+.contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{outline:none;border-color:#667eea}
+.contact-form button{background:linear-gradient(135deg,#667eea,#764ba2);color:white;border:none;padding:14px 30px;border-radius:30px;font-size:1.1rem;cursor:pointer;transition:transform 0.3s;font-weight:500}
+.contact-form button:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(102,126,234,0.4)}
+footer{background:linear-gradient(135deg,#1a1a2e,#16213e);color:#fff;text-align:center;padding:30px 20px;margin-top:40px}
+footer a{color:#00ff88;text-decoration:none}
+footer a:hover{text-decoration:underline}
+.social-links{display:flex;justify-content:center;gap:20px;margin-top:15px}
+.social-links a{background:rgba(255,255,255,0.1);padding:10px 20px;border-radius:25px;transition:all 0.3s}
+.social-links a:hover{background:#667eea;transform:translateY(-3px)}
+@media(max-width:768px){header h1{font-size:2.3rem}.hero h2{font-size:1.8rem}nav ul{flex-direction:column;align-items:center}.contact-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<marquee behavior="scroll" direction="left" scrollamount="5">
+ Welcome to Aleena Parvez Shaikh's Portfolio | 💻 Java & Python Developer | 🎨 UI/UX Designer | 🗄️ SQL Expert | 📍 Mumbai, India | Let's Build Something Amazing! ✨
+</marquee>
+
+<header>
+<h1>👩‍💻 Aleena Parvez Shaikh</h1>
+<p class="subtitle">Computer Engineering Student | Problem Solver | Tech Enthusiast</p>
+<div class="contact-bar">
+<div class="contact-item">📍 Mumbai, Maharashtra</div>
+<div class="contact-item">📧 <a href="mailto:aleenaparvez05@gmail.com">aleenaparvez05@gmail.com</a></div>
+<div class="contact-item">💼 <a href="https://www.linkedin.com/in/aleenaparvezshaikh98" target="_blank">LinkedIn</a></div>
+<div class="contact-item">💻 <a href="https://github.com/aleenaparvezshaikh-codes" target="_blank">GitHub</a></div>
+</div>
+</header>
+
+<nav>
+<ul>
+<li><a href="#about">🧑‍💻 About</a></li>
+<li><a href="#education">🎓 Education</a></li>
+<li><a href="#skills">🛠️ Skills</a></li>
+<li><a href="#projects">🚀 Projects</a></li>
+<li><a href="#achievements">🏆 Achievements</a></li>
+<li><a href="#contact">📬 Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<h2>Building Tomorrow's Solutions Today</h2>
+<p>Passionate about creating efficient, user-centric technology with clean code and creative design.</p>
+<div class="badges">
+<span class="badge">🎯 OOP Expert</span>
+<span class="badge">🔍 DSA Enthusiast</span>
+<span class="badge">🗄️ Database Pro</span>
+<span class="badge">🌐 Web Developer</span>
+<span class="badge">🎨 UI/UX Designer</span>
+</div>
+</section>
+
+<section id="about">
+<h2>👩‍💻 About Me</h2>
+<div class="about-box">
+<p>As a <strong>Computer Engineering Diploma student</strong> at M.H. Saboo Siddik Polytechnic, Mumbai, I am driven by curiosity, creativity, and a passion for technology. With expertise in <strong>Java, Python, SQL, and Web Development</strong>, I enjoy designing and developing efficient solutions to real-world challenges.</p>
+<br>
+<p>Through academic projects, technical competitions, and continuous learning, I am building a strong foundation for a successful career in <strong>software engineering and technology innovation</strong>. I believe in writing clean, maintainable code and creating intuitive user experiences that make technology accessible to everyone.</p>
+<br>
+<p><strong>🔑 Core Interests:</strong> Object-Oriented Programming, Data Structures & Algorithms, Database Management Systems, Web Development, Problem Solving, UI/UX Design</p>
+</div>
+</section>
+
+<section id="education">
+<h2>🎓 Education</h2>
+<div class="about-box">
+<h3>🏫 St. Anthony's Girls' High School</h3>
+<p>✓ Successfully completed Secondary School Certificate (SSC)</p>
+<p>✓ Certificate of Appreciation for Academic Excellence</p>
+<br>
+<h3>💻 M.H. Saboo Siddik Polytechnic, Mumbai</h3>
+<p><strong>Diploma in Computer Engineering</strong> | Currently Pursuing</p>
+<p>✓ Focus Areas: Programming, Software Development, Databases, Operating Systems, Web Technologies</p>
+<p>✓ <strong>🏆 Best Performance Award</strong> – Recognized for Outstanding Academic Excellence</p>
+<p>✓ <strong>🥇 Visual Labs Topper</strong> – Excellence in Practical Computing</p>
+</div>
+</section>
+
+<section id="skills">
+<h2>🛠️ Technical Skills</h2>
+<div class="about-box">
+<h3>💻 Programming Languages</h3>
+<div class="skill-grid">
+<span class="skill">☕ Java (Primary)</span>
+<span class="skill">🐍 Python (Primary)</span>
+<span class="skill">⚡ C++</span>
+<span class="skill">🔷 C</span>
+</div>
+<h3>🌐 Web Technologies</h3>
+<div class="skill-grid">
+<span class="skill">📄 HTML5</span>
+<span class="skill">🎨 CSS3</span>
+<span class="skill">📱 Responsive Design</span>
+<span class="skill">📁 File Handling</span>
+</div>
+<h3>🗄️ Database Technologies</h3>
+<div class="skill-grid">
+<span class="skill">🔍 SQL</span>
+<span class="skill">🗃️ Oracle Database</span>
+<span class="skill">⚙️ PL/SQL</span>
+<span class="skill">📊 DBMS</span>
+</div>
+<h3>🧠 Core Concepts</h3>
+<div class="skill-grid">
+<span class="skill">🏗️ Data Structures</span>
+<span class="skill">🔄 OOP Principles</span>
+<span class="skill">🔧 Operating Systems</span>
+<span class="skill">⚙️ Software Engineering</span>
+</div>
+<h3>🎨 Design & Tools</h3>
+<div class="skill-grid">
+<span class="skill">✏️ Figma</span>
+<span class="skill">🖼️ Canva</span>
+<span class="skill">📊 MS Office</span>
+</div>
+</div>
+</section>
+
+<section id="projects">
+<h2>🚀 Featured Projects</h2>
+<p style="margin-bottom:20px;color:#666"><em>Click any project title to expand and view details ↓</em></p>
+
+<details>
+<summary>📱 Smart Attendance Tracker with Alerts | Java</summary>
+<div class="project-meta">
+<span class="project-tag">Java AWT</span>
+<span class="project-tag">OOP</span>
+<span class="project-tag">Multithreading</span>
+<span class="project-tag">GUI</span>
+</div>
+<ul class="project-list">
+<li>Developed a desktop-based Smart Attendance Tracker using Java AWT for graphical user interface</li>
+<li>Implemented attendance calculation by accepting total and attended classes as user input</li>
+<li>Integrated custom exception handling to detect low attendance and trigger alert messages</li>
+<li>Added popup notifications using JOptionPane to inform users about attendance status and input errors</li>
+<li>Utilized multithreading to generate alert messages without interrupting the main application</li>
+<li>Designed an interactive and user-friendly interface to improve usability</li>
+<li>Strengthened concepts of object-oriented programming, event handling, exception handling, and GUI development</li>
+</ul>
+</details>
+
+<details>
+<summary>📚 Smart Study Planner Using Mood Analysis | Python</summary>
+<div class="project-meta">
+<span class="project-tag">Python</span>
+<span class="project-tag">Decision Logic</span>
+<span class="project-tag">User-Centric</span>
+</div>
+<ul class="project-list">
+<li>Built an intelligent study recommendation system that suggests subjects based on the user's mood to enhance productivity</li>
+<li>Designed decision-based logic to categorize moods as positive, negative, or neutral, and dynamically prioritize subjects</li>
+<li>Focused on problem-solving and user-centric functionality to improve study efficiency</li>
+</ul>
+</details>
+
+<details>
+<summary>🔢 Data Structures Applications | C</summary>
+<div class="project-meta">
+<span class="project-tag">C</span>
+<span class="project-tag">DSA</span>
+<span class="project-tag">Algorithms</span>
+</div>
+<ul class="project-list">
+<li>Implemented multiple programs using core data structures such as arrays, stacks, queues, and linked lists</li>
+<li>Applied algorithms for insertion, deletion, searching, and sorting operations</li>
+<li>Strengthened logical thinking and problem-solving skills through structured programming</li>
+</ul>
+</details>
+
+<details>
+<summary>👨‍🎓 Student Management System | C++</summary>
+<div class="project-meta">
+<span class="project-tag">C++</span>
+<span class="project-tag">OOP</span>
+<span class="project-tag">CRUD</span>
+</div>
+<ul class="project-list">
+<li>Developed a menu-driven application to manage student records, supporting insertion, deletion, searching, and display</li>
+<li>Utilized OOP principles for structured data organization and maintainability</li>
+</ul>
+</details>
+
+<details>
+<summary>🏥 Hospital Management System | SQL / Oracle Database</summary>
+<div class="project-meta">
+<span class="project-tag">SQL</span>
+<span class="project-tag">Oracle</span>
+<span class="project-tag">PL/SQL</span>
+</div>
+<ul class="project-list">
+<li>Designed and managed a structured database to handle patient, doctor, and appointment records</li>
+<li>Implemented SQL queries and database operations for efficient data retrieval and management</li>
+<li>Applied DBMS and PL/SQL concepts to ensure reliable data handling</li>
+</ul>
+</details>
+
+<details>
+<summary>🛒 Flipkart UI Replica | Figma</summary>
+<div class="project-meta">
+<span class="project-tag">Figma</span>
+<span class="project-tag">UI/UX</span>
+<span class="project-tag">Prototyping</span>
+</div>
+<ul class="project-list">
+<li>Designed a high-fidelity prototype replicating the homepage of Flipkart using Figma</li>
+<li>Practiced UI/UX principles, layout balance, typography, and color hierarchy to improve prototyping skills</li>
+</ul>
+</details>
+
+<details>
+<summary>🌐 Portfolio Website & Form | HTML, CSS</summary>
+<div class="project-meta">
+<span class="project-tag">HTML5</span>
+<span class="project-tag">CSS3</span>
+<span class="project-tag">Responsive</span>
+</div>
+<ul class="project-list">
+<li>Built a responsive personal portfolio website with structured layouts and interactive forms</li>
+<li>Demonstrated front-end web development skills with HTML and CSS</li>
+</ul>
+</details>
+
+<details>
+<summary>🎬 Prime-Inspired Streaming Interface | Figma</summary>
+<div class="project-meta">
+<span class="project-tag">Figma</span>
+<span class="project-tag">UI Design</span>
+<span class="project-tag">Creative</span>
+</div>
+<ul class="project-list">
+<li>Created an original streaming platform interface inspired by Amazon Prime services</li>
+<li>Showcased creativity and user-focused design, with interactive screens demonstrating content organization</li>
+</ul>
+</details>
+
+<details>
+<summary>🎨 College Invitations & Certificates | Canva</summary>
+<div class="project-meta">
+<span class="project-tag">Canva</span>
+<span class="project-tag">Graphic Design</span>
+<span class="project-tag">Branding</span>
+</div>
+<ul class="project-list">
+<li>Designed professional invitations and certificates for academic events using Canva</li>
+<li>Applied visual hierarchy, branding, and readability principles to deliver polished, print-ready designs</li>
+</ul>
+</details>
+
+<p style="margin-top:25px;text-align:center">
+🔗 <strong>View All Code:</strong> 
+<a href="https://github.com/aleenaparvezshaikh-codes" target="_blank" style="background:#667eea;color:white;padding:10px 25px;border-radius:25px;text-decoration:none">
+GitHub Repository →
+</a>
+</p>
+</section>
+
+<section id="achievements">
+<h2>🏆 Achievements & Certifications</h2>
+<div class="achievements-grid">
+<div class="achievement-card">
+<h4>🎓 Academic Excellence</h4>
+<p>• SSC Certificate of Appreciation</p>
+<p>• <strong>🏆 Best Performance Award</strong> – Outstanding Academic Achievement</p>
+<p>• <strong>🥇 Visual Labs Topper</strong> – Excellence in Practical Computing</p>
+</div>
+<div class="achievement-card">
+<h4>🏅 Competitions</h4>
+<p>• State-Level Technical Model Making: <strong>2nd Position</strong></p>
+<p>• Elocution Competition: <strong>1st Prize</strong></p>
+<p>• Technical Paper Presentation: Runner Up</p>
+</div>
+<div class="achievement-card">
+<h4>📜 Certifications</h4>
+<p>• Byju's Learning Program – Completed</p>
+<p>• MS-CIT Knowledge Check Quiz – Completed</p>
+<p>• TCS iON Career Edge – Young Professional</p>
+<p>• TCS iON Group Discussion – Participated</p>
+</div>
+</div>
+</section>
+
+<section id="activities">
+<h2>🤝 Leadership & Activities</h2>
+<div class="about-box">
+<ul style="padding-left:20px">
+<li><strong>🎪 Event Coordinator:</strong> Successfully organized & coordinated 3 college events with end-to-end planning and execution</li>
+<li><strong>🌍 Climate Awareness:</strong> Participation Certificate in "Living with Climate Change & Water Management" workshop</li>
+<li><strong>📚 Academic Engagement:</strong> Active participant in college workshops, tech talks, and extracurricular programs</li>
+<li><strong>👥 Team Collaboration:</strong> Demonstrated leadership, communication, and teamwork skills across multiple initiatives</li>
+</ul>
+</div>
+</section>
+
+<section id="contact">
+<h2>📬 Let's Connect</h2>
+<div class="contact-grid">
+<div class="contact-info">
+<h3>👋 Get In Touch</h3>
+<p>📧 <a href="mailto:aleenaparvez05@gmail.com">aleenaparvez05@gmail.com</a></p>
+<p>📍 Mumbai, Maharashtra, India</p>
+<p>💼 <a href="https://www.linkedin.com/in/aleenaparvezshaikh98" target="_blank">LinkedIn Profile</a></p>
+<p>💻 <a href="https://github.com/aleenaparvezshaikh-codes" target="_blank">GitHub Repository</a></p>
+</div>
+<div class="contact-form">
+<h3>✉️ Send a Message</h3>
+<form action="mailto:aleenaparvez05@gmail.com" method="POST" enctype="text/plain">
+<input type="text" name="name" placeholder="Your Name *" required>
+<input type="email" name="email" placeholder="Your Email *" required>
+<select name="purpose" required>
+<option value="">Select Purpose *</option>
+<option value="Internship">💼 Internship Opportunity</option>
+<option value="Collaboration">🤝 Project Collaboration</option>
+<option value="Mentorship">🎓 Mentorship Request</option>
+<option value="Feedback">💡 Feedback / Suggestion</option>
+<option value="General">💬 General Inquiry</option>
+</select>
+<textarea name="message" placeholder="Your Message *" rows="5" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+<p style="font-size:0.85rem;color:#666;margin-top:10px">* Form opens your default email client. For instant response, email me directly!</p>
+</div>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Aleena Parvez Shaikh | Crafted using Pure HTML/CSS</p>
+<p style="margin:10px 0;font-size:0.95rem">Mumbai, India | Available for Opportunities</p>
+<div class="social-links">
+<a href="mailto:aleenaparvez05@gmail.com">📧 Email</a>
+<a href="https://www.linkedin.com/in/aleenaparvezshaikh98" target="_blank">💼 LinkedIn</a>
+<a href="https://github.com/aleenaparvezshaikh-codes" target="_blank">💻 GitHub</a>
+<a href="#top">⬆️ Back to Top</a>
+</div>
+</footer>
+
+</body>
+</html>
